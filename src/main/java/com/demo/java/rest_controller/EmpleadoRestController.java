@@ -48,7 +48,7 @@ public class EmpleadoRestController {
             return ResponseEntity.notFound().build();
         }
     }
-
+///comentado
 
     @PutMapping("/empleado/{id}")
     public ResponseEntity<Empleado> actualizarEmpleadosPorId(@PathVariable Long id, @RequestBody Empleado detallesEmpleado) {
