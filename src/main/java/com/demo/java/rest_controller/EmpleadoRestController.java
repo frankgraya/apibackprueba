@@ -55,7 +55,8 @@ public class EmpleadoRestController {
     //4
     //5
     //6
-    //7    @PutMapping("/empleado/{id}")
+    //7
+    //8
     public ResponseEntity<Empleado> actualizarEmpleadosPorId(@PathVariable Long id, @RequestBody Empleado detallesEmpleado) {
         Empleado empleado = empleadoService.buscarEmpleadoPorId(id);
 
