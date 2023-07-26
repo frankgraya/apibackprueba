@@ -48,8 +48,8 @@ public class EmpleadoRestController {
             return ResponseEntity.notFound().build();
         }
     }
-///comentado
-
+///comentado///
+    //1
     @PutMapping("/empleado/{id}")
     public ResponseEntity<Empleado> actualizarEmpleadosPorId(@PathVariable Long id, @RequestBody Empleado detallesEmpleado) {
         Empleado empleado = empleadoService.buscarEmpleadoPorId(id);
