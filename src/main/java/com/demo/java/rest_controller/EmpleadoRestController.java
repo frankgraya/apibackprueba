@@ -58,6 +58,7 @@ public class EmpleadoRestController {
     sñlnsdlknlknksnkdnd
 mddlmñdme
     dwmwmñwmds
+            otro ponerlo
             dlmelñmñlmlñdmñ
     @PutMapping("/empleado/{id}")
     public ResponseEntity<Empleado> actualizarEmpleadosPorId(@PathVariable Long id, @RequestBody Empleado detallesEmpleado) {
