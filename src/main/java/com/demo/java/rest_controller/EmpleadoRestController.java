@@ -56,7 +56,7 @@ public class EmpleadoRestController {
     //5
 
     sñlnsdlknlknksnkdnd
-
+mddlmñdme
     dwmwmñwmds
             dlmelñmñlmlñdmñ
     @PutMapping("/empleado/{id}")
