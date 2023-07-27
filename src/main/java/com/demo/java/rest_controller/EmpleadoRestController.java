@@ -58,6 +58,7 @@ public class EmpleadoRestController {
     sñlnsdlknlknksnkdnd
 mddlmñdme
     dwmwmñwmds
+            diamante en burot
             limon
     pomodoro
             otro ponerlo
