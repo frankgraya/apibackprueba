@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2270247b-f378-439e-ac80-b6f05af0297d" name="Changes" comment="dmmdlwmldkwmwdkd">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java" afterDir="false" />
-    </list>
+    <list default="true" id="bbcff6cd-2e10-4baf-a73a-64d9f94fda11" name="Changes" comment="nueco" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +25,9 @@
     &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="985381b568baef2b9ee0d94b98f26d769facd294" />
+  </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -37,6 +38,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/demo/java/excepciones/EmpleadoNotFoundException.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/demo/java/service/EmpleadoService.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -114,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690429518199</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="nueco">
+      <created>1690431706659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690431706659</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dmmdlwmldkwmwdkd" />
-    <option name="LAST_COMMIT_MESSAGE" value="dmmdlwmldkwmwdkd" />
+    <MESSAGE value="nueco" />
+    <option name="LAST_COMMIT_MESSAGE" value="nueco" />
   </component>
 </project>

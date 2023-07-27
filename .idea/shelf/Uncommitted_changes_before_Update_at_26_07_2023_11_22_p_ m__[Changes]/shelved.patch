@@ -1,0 +1,184 @@
+Index: src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.demo.java.rest_controller;\r\n\r\n\r\nimport com.demo.java.excepciones.EmpleadoNotFoundException;\r\nimport com.demo.java.model.Empleado;\r\nimport com.demo.java.service.EmpleadoService;\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.http.ResponseEntity;\r\nimport org.springframework.web.bind.annotation.*;\r\n\r\nimport java.util.List;\r\n\r\n@Slf4j\r\n@RestController\r\n@CrossOrigin(origins = \"http://localhost:4200/\")\r\n@RequestMapping(\"/api/\")\r\npublic class EmpleadoRestController {\r\n\r\n    @Autowired\r\n    private EmpleadoService empleadoService;\r\n\r\n\r\n    //Este metodo Sirve para lista empleados\r\n    @GetMapping(\"/empleado\")\r\n    public List<Empleado> listarTodosLosEmpleados() {\r\n        log.warn(\"List<Empleado CONTROLLER\");\r\n        List<Empleado> empleados = empleadoService.listarEmpleados();\r\n        if (empleados.isEmpty()) {\r\n            throw new EmpleadoNotFoundException(\"No se encontraron empleados.\");\r\n        }\r\n        return empleados;\r\n    }\r\n\r\n    //Este metodo Sirve para crearEmpleado\r\n    @PostMapping(\"/empleado\")\r\n    public Empleado guardarEmpleado(@RequestBody Empleado empleado) {\r\n        log.warn(\"guardarEmpleado CONTROLLER\");\r\n        return empleadoService.crearEmpleado(empleado);\r\n    }\r\n\r\n    @GetMapping(\"/empleado/{id}\")\r\n    public ResponseEntity<Empleado> obtenerEmpleadosPorId(@PathVariable Long id) {\r\n        Empleado empleado = empleadoService.buscarEmpleadoPorId(id);\r\n        if (empleado != null) {\r\n            return ResponseEntity.ok(empleado);\r\n        } else {\r\n            return ResponseEntity.notFound().build();\r\n        }\r\n    }\r\n///comentado///\r\n    //1\r\n    //2\r\n    //3\r\n    //4\r\n    //5\r\n\r\n    sñlnsdlknlknksnkdnd\r\nmddlmñdme\r\n    dwmwmñwmds\r\n            diamante en burot\r\n            limon\r\n    pomodoro\r\n            otro ponerlo\r\n            dlmelñmñlmlñdmñ\r\n    @PutMapping(\"/empleado/{id}\")\r\n    public ResponseEntity<Empleado> actualizarEmpleadosPorId(@PathVariable Long id, @RequestBody Empleado detallesEmpleado) {\r\n        Empleado empleado = empleadoService.buscarEmpleadoPorId(id);\r\n\r\n        empleado.setNombre(detallesEmpleado.getNombre());\r\n        empleado.setApellido(detallesEmpleado.getApellido());\r\n        empleado.setEmail(detallesEmpleado.getEmail());\r\n        empleado.setImage(detallesEmpleado.getImage());\r\n\r\n        Empleado empleadoActualizado = empleadoService.crearEmpleado(empleado);\r\n        if (empleado != null) {\r\n            return ResponseEntity.ok(empleadoActualizado);\r\n        } else {\r\n            return ResponseEntity.notFound().build();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java b/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java
+--- a/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java	(revision 63a706aabcd674a0a71c6c1af341c1241f459a12)
++++ b/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java	(date 1690431764427)
+@@ -58,8 +58,11 @@
+     sñlnsdlknlknksnkdnd
+ mddlmñdme
+     dwmwmñwmds
++<<<<<<< HEAD
+             diamante en burot
+             limon
++=======
++>>>>>>> parent of 985381b (limon)
+     pomodoro
+             otro ponerlo
+             dlmelñmñlmlñdmñ
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_26_07_2023_11_19_p_ m__[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_07_2023_11_19_p_ m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_07_2023_11_19_p_ m__[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1690431572940)
++++ b/.idea/shelf/Uncommitted_changes_before_Checkout_at_26_07_2023_11_19_p_ m__[Changes]/shelved.patch	(date 1690431572940)
+@@ -0,0 +1,152 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++deleted file mode 100644
++--- a/.idea/workspace.xml	(revision ac233831d367106b76f4e4ca7111b022695c558a)
+++++ /dev/null	(revision ac233831d367106b76f4e4ca7111b022695c558a)
++@@ -1,141 +0,0 @@
++-<?xml version="1.0" encoding="UTF-8"?>
++-<project version="4">
++-  <component name="AutoImportSettings">
++-    <option name="autoReloadType" value="SELECTIVE" />
++-  </component>
++-  <component name="ChangeListManager">
++-    <list default="true" id="2270247b-f378-439e-ac80-b6f05af0297d" name="Changes" comment="backend">
++-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/java/rest_controller/EmpleadoRestController.java" afterDir="false" />
++-    </list>
++-    <option name="SHOW_DIALOG" value="false" />
++-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++-    <option name="LAST_RESOLUTION" value="IGNORE" />
++-  </component>
++-  <component name="FileTemplateManagerImpl">
++-    <option name="RECENT_TEMPLATES">
++-      <list>
++-        <option value="Class" />
++-      </list>
++-    </option>
++-  </component>
++-  <component name="Git.Settings">
++-    <option name="RECENT_BRANCH_BY_REPOSITORY">
++-      <map>
++-        <entry key="$PROJECT_DIR$" value="main" />
++-      </map>
++-    </option>
++-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++-  </component>
++-  <component name="GitHubPullRequestSearchHistory">{
++-  &quot;lastFilter&quot;: {
++-    &quot;state&quot;: &quot;OPEN&quot;
++-  }
++-}</component>
++-  <component name="GithubPullRequestsUISettings">
++-    <option name="selectedUrlAndAccountId">
++-      <UrlAndAccount>
++-        <option name="accountId" value="664712c2-1396-489c-8253-cb8e40f406b4" />
++-        <option name="url" value="https://github.com/frankgraya/Proyecto-api-rest-Back-y-front.git" />
++-      </UrlAndAccount>
++-    </option>
++-  </component>
++-  <component name="HighlightingSettingsPerFile">
++-    <setting file="file://$PROJECT_DIR$/src/main/java/com/demo/java/excepciones/EmpleadoNotFoundException.java" root0="SKIP_INSPECTION" />
++-    <setting file="file://$PROJECT_DIR$/src/main/java/com/demo/java/service/EmpleadoService.java" root0="SKIP_INSPECTION" />
++-    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_HIGHLIGHTING" />
++-  </component>
++-  <component name="MarkdownSettingsMigration">
++-    <option name="stateVersion" value="1" />
++-  </component>
++-  <component name="ProjectId" id="2MknBR3pK7A3Tm1Dn4mBgDxOZyv" />
++-  <component name="ProjectViewState">
++-    <option name="hideEmptyMiddlePackages" value="true" />
++-    <option name="showLibraryContents" value="true" />
++-  </component>
++-  <component name="PropertiesComponent">{
++-  &quot;keyToString&quot;: {
++-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++-    &quot;last_opened_file_path&quot;: &quot;C:/Users/franc/IdeaProjects/Proyecto-api-rest-Back-y-front/back-api-java&quot;,
++-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
++-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
++-  }
++-}</component>
++-  <component name="RunAnythingCache">
++-    <option name="myCommands">
++-      <command value="mvn clean verify sonar:sonar    -Dsonar.projectKey=prueba   -Dsonar.host.url=http://localhost:9000  -Dsonar.login=sqp_ebde4f5041cb8684782524862b0e858ad5558d3d" />
++-    </option>
++-  </component>
++-  <component name="RunManager" selected="Application.JavaApplication">
++-    <configuration name="JavaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++-      <option name="MAIN_CLASS_NAME" value="com.demo.java.JavaApplication" />
++-      <module name="back-api-java" />
++-      <extension name="coverage">
++-        <pattern>
++-          <option name="PATTERN" value="com.demo.java.*" />
++-          <option name="ENABLED" value="true" />
++-        </pattern>
++-      </extension>
++-      <method v="2">
++-        <option name="Make" enabled="true" />
++-      </method>
++-    </configuration>
++-    <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++-      <option name="MAIN_CLASS_NAME" value="com.demo.java.Prueba" />
++-      <module name="back-api-java" />
++-      <extension name="coverage">
++-        <pattern>
++-          <option name="PATTERN" value="com.demo.java.*" />
++-          <option name="ENABLED" value="true" />
++-        </pattern>
++-      </extension>
++-      <method v="2">
++-        <option name="Make" enabled="true" />
++-      </method>
++-    </configuration>
++-    <recent_temporary>
++-      <list>
++-        <item itemvalue="Application.JavaApplication" />
++-        <item itemvalue="Application.Prueba" />
++-      </list>
++-    </recent_temporary>
++-  </component>
++-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++-  <component name="TaskManager">
++-    <task active="true" id="Default" summary="Default task">
++-      <changelist id="2270247b-f378-439e-ac80-b6f05af0297d" name="Changes" comment="" />
++-      <created>1678320316710</created>
++-      <option name="number" value="Default" />
++-      <option name="presentableId" value="Default" />
++-      <updated>1678320316710</updated>
++-    </task>
++-    <task id="LOCAL-00001" summary="backend">
++-      <created>1690408849959</created>
++-      <option name="number" value="00001" />
++-      <option name="presentableId" value="LOCAL-00001" />
++-      <option name="project" value="LOCAL" />
++-      <updated>1690408849959</updated>
++-    </task>
++-    <option name="localTasksCounter" value="2" />
++-    <servers />
++-  </component>
++-  <component name="Vcs.Log.Tabs.Properties">
++-    <option name="TAB_STATES">
++-      <map>
++-        <entry key="MAIN">
++-          <value>
++-            <State />
++-          </value>
++-        </entry>
++-      </map>
++-    </option>
++-  </component>
++-  <component name="VcsManagerConfiguration">
++-    <MESSAGE value="backend" />
++-    <option name="LAST_COMMIT_MESSAGE" value="backend" />
++-  </component>
++-</project>
++\ No newline at end of file

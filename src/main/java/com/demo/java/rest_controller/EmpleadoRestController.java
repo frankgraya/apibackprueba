@@ -59,8 +59,11 @@ public class EmpleadoRestController {
 mddlmñdme
     dwmwmñwmds
 <<<<<<< HEAD
+<<<<<<< HEAD
             diamante en burot
             limon
+=======
+>>>>>>> parent of 985381b (limon)
 =======
 >>>>>>> parent of 985381b (limon)
     pomodoro
